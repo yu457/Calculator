@@ -50,10 +50,12 @@
             // 
             // txtNumber
             // 
-            this.txtNumber.Location = new System.Drawing.Point(52, 56);
+            this.txtNumber.Location = new System.Drawing.Point(52, 62);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(534, 61);
             this.txtNumber.TabIndex = 0;
+            this.txtNumber.Text = "0";
+            this.txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnClear
             // 
