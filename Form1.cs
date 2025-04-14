@@ -35,7 +35,7 @@ namespace Calculator
 
             // 確認輸入文字框中完全沒有小數點
             if (txtNumber.Text.IndexOf(".") == -1)
-                txtNumber.Text = txtNumber.Text + ".";
+                txtNumber.Text = txtNumber.Text + ".";  
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -96,75 +96,65 @@ namespace Calculator
             operators = 3; //選擇「除」號
         }
 
-        private void btnZero_Click(object sender, EventArgs e)
+        private void Add_Number(string _number)
         {
             if (txtNumber.Text == "0")
                 txtNumber.Text = "";
-            txtNumber.Text = txtNumber.Text + "0";
+            txtNumber.Text = txtNumber.Text + _number;
+        }
+
+        private void btnZero_Click(object sender, EventArgs e)
+        {
+            Add_Number("0");
         }
 
         private void btnOne_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; // 如果你的判斷式簡單到只有一行程式，可以把 { } 大刮號省略掉
-            txtNumber.Text += "1";
+            Add_Number("1");
+            //if (txtNumber.Text == "0")
+                //txtNumber.Text = ""; // 如果你的判斷式簡單到只有一行程式，可以把 { } 大刮號省略掉
+            //txtNumber.Text += "1";
             // 這種寫法和這段「txtNumber.Text = txtNumber.Text + "1";」是一樣的        }
         }
 
         private void btnTwo_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "2";
+            Add_Number("2");
         }
 
         private void btnThree_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "3";
+            Add_Number("3");
         }
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "4";
+            Add_Number("4");
         }
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "5";
+            Add_Number("5");
         }
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "6";
+            Add_Number("6");
         }
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "7";
+            Add_Number("7");
         }
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "8";
+            Add_Number("8");
         }
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            if (txtNumber.Text == "0")
-                txtNumber.Text = ""; 
-            txtNumber.Text = txtNumber.Text + "9"; 
+            Add_Number("9");
         }
     }
 
