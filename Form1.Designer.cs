@@ -46,6 +46,8 @@
             this.btnThree = new System.Windows.Forms.Button();
             this.btnSix = new System.Windows.Forms.Button();
             this.btnNine = new System.Windows.Forms.Button();
+            this.btnPercent = new System.Windows.Forms.Button();
+            this.btnFallback = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNumber
@@ -227,11 +229,33 @@
             this.btnNine.UseVisualStyleBackColor = true;
             this.btnNine.Click += new System.EventHandler(this.btnNine_Click);
             // 
+            // btnPercent
+            // 
+            this.btnPercent.Location = new System.Drawing.Point(52, 330);
+            this.btnPercent.Name = "btnPercent";
+            this.btnPercent.Size = new System.Drawing.Size(102, 61);
+            this.btnPercent.TabIndex = 35;
+            this.btnPercent.Text = "%";
+            this.btnPercent.UseVisualStyleBackColor = true;
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
+            // 
+            // btnFallback
+            // 
+            this.btnFallback.Location = new System.Drawing.Point(52, 196);
+            this.btnFallback.Name = "btnFallback";
+            this.btnFallback.Size = new System.Drawing.Size(102, 61);
+            this.btnFallback.TabIndex = 36;
+            this.btnFallback.Text = "<<";
+            this.btnFallback.UseVisualStyleBackColor = true;
+            this.btnFallback.Click += new System.EventHandler(this.btnFallback_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(24F, 50F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 435);
+            this.Controls.Add(this.btnFallback);
+            this.Controls.Add(this.btnPercent);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnPlus);
@@ -279,6 +303,8 @@
         private System.Windows.Forms.Button btnThree;
         private System.Windows.Forms.Button btnSix;
         private System.Windows.Forms.Button btnNine;
+        private System.Windows.Forms.Button btnPercent;
+        private System.Windows.Forms.Button btnFallback;
     }
 }
 

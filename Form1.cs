@@ -153,10 +153,32 @@ namespace Calculator
         {
             Add_Number("8");
         }
-
-        private void btnNine_Click(object sender, EventArgs e)
++        private void btnNine_Click(object sender, EventArgs e)
         {
             Add_Number("9");
+        }
+
+        private void btnFallback_Click(object sender, EventArgs e)
+        {
+            string current = txtNumber.Text;
+
+            if (current.Length > 1)
+            {
+                // 移除最後一個字元
+                txtNumber.Text = current.Substring(0, current.Length - 1);
+            }
+            else
+            {
+                // 如果只剩一位就設回 0
+                txtNumber.Text = "0";
+            }
+        }
+
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+            float number = Convert.ToSingle(txtNumber.Text);
+            number = number / 100f;
+            txtNumber.Text = string.Format("{0:P2}", number); // 顯示成百分比格式
         }
     }
 
